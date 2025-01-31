@@ -1,0 +1,126 @@
+# Task 1: Create a sequence from 5 to -11 in steps of 0.3
+sequence1 <- seq(5, -11, by = -0.3)
+
+
+# Task 2: Overwrite the object from Task 1 with the reversed order
+sequence1 <- rev(sequence1)
+
+
+# Task 3: Repeat vector c(-1,3,-5,7,-9) twice, with each element repeated 10 times, and store the result sorted from largest to smallest
+repeated_vector <- rep(c(-1,3,-5,7,-9), each = 10)
+sorted_vector <- sort(repeated_vector, decreasing = TRUE)
+
+
+# Task 4: Create and store a vector with the following elements:
+# i. A sequence of integers from 6 to 12
+# ii. A threefold repetition of the value 5.3
+# iii. The number -3
+# iv. A sequence of nine values starting at 102 and ending at the total length of the vector created in Task 3.
+sequence4 <- c(6:12, rep(5.3, 3), -3, seq(102, 110))
+
+
+# Task 5: Confirm that the length of the vector from Task 4 is 20
+length(sequence4) == 20
+
+
+# Task 6: Create a vector with the following elements:
+# i. A sequence of length 5 from 3 to 6 (inclusive)
+# ii. A twofold repetition of the vector c(2,-5.1,-33)
+# iii. The value 7/42 + 2
+vector6 <- c(3:7, rep(c(2,-5.1,-33), 2), 7/42 + 2)
+
+
+# Task 7: Extract the first and last elements from vector from Task 6
+first_last <- c(vector6[1], vector6[length(vector6)])
+
+
+# Task 8: Omit the first and last values of vector from Task 6
+middle_values <- vector6[-c(1, length(vector6))]
+
+
+# Task 9: Use only the results from Task 7 and Task 8 to reconstruct Task 6
+reconstructed_vector <- c(first_last[1], middle_values, first_last[2])
+
+
+# Task 10: Overwrite vector from Task 6, sorting from smallest to largest
+vector6_sorted <- sort(vector6)
+
+
+# Task 11: Reverse vector from Task 10 using colon operator, and compare with sort using decreasing=TRUE
+reversed1 <- vector6_sorted[length(vector6_sorted):1]
+reversed2 <- sort(vector6_sorted, decreasing = TRUE)
+identical(reversed1, reversed2)
+
+
+# Task 12: Create vector from Task 8 by repeating elements at specific positions
+modified_vector8 <- c(rep(middle_values[3], 3), rep(middle_values[6], 4), middle_values[length(middle_values)])
+
+
+# Task 13: Create a copy of vector from Task 10, then overwrite specific elements
+vector_copy <- vector6_sorted
+vector_copy[1] <- 99
+vector_copy[5:7] <- 95:97
+vector_copy[length(vector_copy)] <- 95
+
+
+# Task 14: Convert vector c(2,0.5,1,2,0.5,1,2,0.5,1) to a vector of only 1s using a vector of length 3
+converted_vector <- rep(1, length(c(2,0.5,1,2,0.5,1,2,0.5,1))/3)
+
+
+# Task 15: Convert temperatures from Fahrenheit to Celsius
+fahrenheit <- c(45, 77, 20, 19, 101, 120, 212)
+celsius <- 5/9 * (fahrenheit - 32)
+
+
+# Task 16: Use vectors c(2,4,6) and c(1,2) with rep and * to create c(2,4,6,4,8,12)
+result_vector <- rep(c(2,4,6), times = c(1,1,1)) * rep(c(1,2), times = 3)
+
+
+# Task 17: Overwrite middle four elements of vector from Task 16
+modified_vector16 <- result_vector
+modified_vector16[2:5] <- c(-0.1, -100, -0.1, -100)
+
+
+# Task 18: Generate and reverse sequence from 10 to -20 in steps of 0.5
+sequence18 <- seq(10, -20, by = -0.5)
+reversed_sequence18 <- rev(sequence18)
+
+
+# Task 19: Repeat vector c(-2,4,-6,8,-10) three times, repeat each element 5 times, then sort from smallest to largest
+repeated_vector19 <- rep(c(-2, 4, -6, 8, -10), each = 5)
+sorted_vector19 <- sort(repeated_vector19)
+
+
+# Task 20: Create composite vector with sequence from 15 to 25, repetition of 4.2, -5, and sequence from 200 to length of vector from Task 2
+sequence20 <- c(15:25, rep(4.2, 2), -5, seq(200, length.out = 12))
+
+
+# Task 21: Confirm length of vector from Task 20
+length(sequence20) == 25
+
+
+# Task 22: Compile vector with sequence from 2 to 8, repetition of vector c(3,-4.2,-50), and specific value
+sequence22 <- c(2:8, rep(c(3, -4.2, -50), 3), 14/84 + 3)
+
+
+# Task 23: Extract the first and third elements from vector in Task 5, reconstruct original sequence
+first_third <- c(sequence4[1], sequence4[3])
+reconstructed_sequence <- c(first_third, sequence4[-c(1, 3)])
+
+
+# Task 24: Replace middle three elements from Task 5 with -0.5, -200, -0.5
+sequence4[5:7] <- c(-0.5, -200, -0.5)
+
+
+# Task 25: Convert vector c(3,1,2,3,1,2,3,1,2) to a vector of only 2s
+vector25 <- rep(2, length(c(3,1,2,3,1,2,3,1,2)))
+
+
+# Task 26: Convert Fahrenheit temperatures to Celsius
+fahrenheit26 <- c(32, 68, 14, 0, 113, 104, 198)
+celsius26 <- 5/9 * (fahrenheit26 - 32)
+
+
+# Task 27: Multiply vectors c(3,5,7) and c(2,3) with repetition, then replace middle elements
+vector27 <- rep(c(3,5,7), times = c(1,1,1)) * rep(c(2,3), times = 3)
+vector27[2:5] <- c(-1, -150, -1, -150)
